@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thalors Wraths - Official Site</title>
+  <meta name="description" content="Thalors Wraths is a fast 2D action-platformer built around elemental combos, handcrafted levels, and tight controls. Download the demo or wishlist now." />
+  <meta name="theme-color" content="#0b0f1a" />
+  <link rel="icon" type="image/png" href="assets/favicon-3.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/favicon-3.png">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thalors Wraths - Official Site" />
+  <meta property="og:description" content="Fast 2D action-platformer with elemental combos. Download the demo or wishlist now." />
+  <meta property="og:image" content="assets/Txell_Battle.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/Txell_Battle.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="canonical" href="/">
+  <meta property="og:url" content="/" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="progress" aria-hidden="true"></div>
+  <button id="backtop" hidden aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- NAV + HERO -->
+  <header>
+    <div class="container nav">
+      <div class="left">
+        <img class="logoimg" src="assets/favicon-3.png" alt="Thalors Wraths logo" width="36" height="36">
+        <div class="brand" id="brand">Thalors Wraths</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#features" data-i18n="nav_features">Features</a>
+        <a href="#elements" data-i18n="nav_elements">Elements</a>
+        <a href="#media" data-i18n="nav_media">Media</a>
+        <a href="#download" data-i18n="nav_download">Download</a>
+        <a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a>
+        <a href="#devlog" data-i18n="nav_devlog">Devlog</a>
+        <a href="#press" data-i18n="nav_press">Press</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      </nav>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://www.dropbox.com/scl/fi/h81fv094h6gmvl74lvmkx/thalors-wrath.rar?rlkey=o2ly7z5lzod643y0yjqy5cica&st=xtzb5u1b&dl=1" data-i18n="cta_header">Get Demo</a>
+        <button id="lang" class="lang" aria-label="Language">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="bg" aria-hidden="true"></div>
+    <div class="container wrap">
+      <div class="grid cols-2" style="align-items:center">
+        <div>
+          <div class="pill" data-i18n="tagline">2D Action-Platformer</div>
+          <h1 data-i18n="hero_title">Craft your style with elemental combos.</h1>
+          <p data-i18n="hero_desc">Thalors Wraths is a fast pixel-art action game where Fire, Ice, Storm and Earth collide. Chain abilities, outplay bosses, and uncover the world's secrets across handcrafted levels.</p>
+          <div class="cta">
+            <a id="cta-primary" class="btn primary" target="_blank" rel="noopener" href="https://www.dropbox.com/scl/fi/h81fv094h6gmvl74lvmkx/thalors-wrath.rar?rlkey=o2ly7z5lzod643y0yjqy5cica&st=xtzb5u1b&dl=1" data-i18n="cta_primary">Download Demo</a>
+            <a id="cta-secondary" class="btn ghost" target="_blank" rel="noopener" href="#" data-i18n="cta_secondary">Join Discord</a>
+          </div>
+          <div class="callout" style="margin-top:14px">
+            <span class="chip" data-i18n="chip_noads">No DRM - No ads</span>
+            <span class="chip" data-i18n="chip_gamepad">Full controller support</span>
+            <span class="chip" data-i18n="chip_60fps">Optimized for 60 FPS</span>
+          </div>
+        </div>
+        <div class="media-rail">
+          <div class="video">
+            <iframe id="trailer" src="" title="Thalors Wraths Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="shots">
+            <img src="assets/With-a-Surprising-and-Rich-Story.gif" loading="lazy" alt="Story moment - pixel art GIF">
+            <img src="assets/A-Stunning-Mix-of-Genres.gif" loading="lazy" alt="Hybrid gameplay - pixel art GIF">
+            <img src="assets/Combat-Screenshot_Gallery.gif" loading="lazy" alt="Combat showcase - animated GIF">
+            <img src="assets/combats.gif" loading="lazy" alt="Elemental combos - animated GIF">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="grid cols-2">
+        <div class="card pad">
+          <h2 class="heading" data-i18n="about_title">What is Thalors Wraths?</h2>
+          <p class="sub" data-i18n="about_blurb">A precision platformer with reactive combat...</p>
+          <div class="hr"></div>
+          <div class="grid cols-2">
+            <div class="feature">
+              <div class="icon">⚔️</div>
+              <div>
+                <strong data-i18n="feat_combat_t">Tight Combat</strong>
+                <p class="sub" data-i18n="feat_combat_d">Dodge-rolls, perfect parries...</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">🗺️</div>
+              <div>
+                <strong data-i18n="feat_levels_t">Handcrafted Levels</strong>
+                <p class="sub" data-i18n="feat_levels_d">Each biome introduces a twist...</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">👹</div>
+              <div>
+                <strong data-i18n="feat_bosses_t">Set-Piece Bosses</strong>
+                <p class="sub" data-i18n="feat_bosses_d">Memorable patterns...</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="icon">🎮</div>
+              <div>
+                <strong data-i18n="feat_qol_t">Play Anywhere</strong>
+                <p class="sub" data-i18n="feat_qol_d">Controller & keyboard...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card pad">
+          <h2 class="heading" data-i18n="story_title">Story Premise</h2>
+          <p data-i18n="story_p1">Beneath the ruined citadel...</p>
+          <p data-i18n="story_p2">You are a bonded courier...</p>
+          <div class="hr"></div>
+          <div class="grid cols-2">
+            <div>
+              <div class="pill" data-i18n="biome_1_t">Forgotten Catacombs</div>
+              <p class="sub" data-i18n="biome_1_d">Learn the ropes...</p>
+            </div>
+            <div>
+              <div class="pill" data-i18n="biome_2_t">Emerald Caverns</div>
+              <p class="sub" data-i18n="biome_2_d">Waterfalls...</p>
+            </div>
+            <div>
+              <div class="pill" data-i18n="biome_3_t">Iron Foundry</div>
+              <p class="sub" data-i18n="biome_3_d">Moving pistons...</p>
+            </div>
+            <div>
+              <div class="pill" data-i18n="biome_4_t">Obsidian Keep</div>
+              <p class="sub" data-i18n="biome_4_d">Late-game gauntlet...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELEMENTS -->
+  <section id="elements">
+    <div class="container">
+      <h2 class="heading" data-i18n="elements_title">Elemental System</h2>
+      <p class="sub" data-i18n="elements_blurb">Fuse elements mid-combo...</p>
+      <div class="grid element-grid" style="margin-top:18px">
+        <div class="element"><h4>🔥 <span data-i18n="el_fire">Fire</span></h4><small data-i18n="el_fire_d">Burns over time...</small></div>
+        <div class="element"><h4>❄️ <span data-i18n="el_ice">Ice</span></h4><small data-i18n="el_ice_d">Slows and freezes...</small></div>
+        <div class="element"><h4>⚡ <span data-i18n="el_storm">Storm</span></h4><small data-i18n="el_storm_d">Chains between targets...</small></div>
+        <div class="element"><h4>🪨 <span data-i18n="el_earth">Earth</span></h4><small data-i18n="el_earth_d">Shields, knockbacks...</small></div>
+      </div>
+      <div class="card pad" style="margin-top:18px">
+        <h3 style="margin-top:0" data-i18n="combos_title">Sample Combos</h3>
+        <ul class="sub" style="margin:0;padding-left:18px">
+          <li data-i18n="combo_1"><strong>Fire + Ice</strong>: Thermal Shock...</li>
+          <li data-i18n="combo_2"><strong>Water/Env + Storm</strong>: Conduction...</li>
+          <li data-i18n="combo_3"><strong>Earth + Fire</strong>: Glass Forge...</li>
+          <li data-i18n="combo_4"><strong>Ice + Storm</strong>: Stasis Shatter...</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="grid cols-3">
+        <div class="card pad">
+          <h3 class="heading" style="font-size:1.4rem" data-i18n="req_title">System Requirements</h3>
+          <div class="grid" style="gap:10px">
+            <div>
+              <div class="pill" data-i18n="req_min">Minimum</div>
+              <ul class="sub" style="margin:.4rem 0 .8rem;padding-left:18px">
+                <li>Windows 10/11, 64-bit</li><li>Intel i3 / Ryzen 3</li><li>8 GB RAM</li><li>GTX 750 Ti / RX 460 (2 GB)</li><li>10 GB storage</li>
+              </ul>
+            </div>
+            <div>
+              <div class="pill" data-i18n="req_rec">Recommended</div>
+              <ul class="sub" style="margin:.4rem 0 0;padding-left:18px">
+                <li>Intel i5 / Ryzen 5</li><li>16 GB RAM</li><li>GTX 1060 / RX 580 (4 GB)</li><li>SSD storage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card pad">
+          <h3 class="heading" style="font-size:1.4rem" data-i18n="controls_title">Controls</h3>
+          <ul class="sub" style="margin:0;padding-left:18px">
+            <li data-i18n="ctrl_move">Move: WASD / Left Stick</li>
+            <li data-i18n="ctrl_jump">Jump: Space / A</li>
+            <li data-i18n="ctrl_attack">Attack: J / X</li>
+            <li data-i18n="ctrl_ability">Ability: K / Y</li>
+            <li data-i18n="ctrl_dodge">Dodge: L / B</li>
+            <li data-i18n="ctrl_parry">Parry: Shift / RB</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="sub" data-i18n="controls_note">All bindings are remappable...</p>
+        </div>
+        <div class="card pad">
+          <h3 class="heading" style="font-size:1.4rem" data-i18n="access_title">Accessibility & Settings</h3>
+          <ul class="sub" style="margin:0;padding-left:18px">
+            <li data-i18n="acc_color">Color-blind friendly hit FX and UI</li>
+            <li data-i18n="acc_scale">UI scale slider (80-130%)</li>
+            <li data-i18n="acc_assist">Assist toggles: slower time...</li>
+            <li data-i18n="acc_perf">Performance presets (30/60/120 FPS caps)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA -->
+  <section id="media">
+    <div class="container">
+      <h2 class="heading" data-i18n="media_title">Screenshots</h2>
+      <div class="grid gallery" style="margin-top:14px" id="gallery"></div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="card pad">
+        <div class="grid cols-2" style="align-items:center">
+          <div>
+            <h2 class="heading" data-i18n="download_title">Download Beta</h2>
+            <p class="sub" data-i18n="download_blurb">Download the beta version from our site.</p>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
+            <a id="dl_primary" class="btn primary" target="_blank" rel="noopener" href="#" data-i18n="btn_demo">Download Beta (Win)</a>
+            <a id="dl_mirror" class="btn ghost" target="_blank" rel="noopener" href="#" data-i18n="btn_mirror">Mirror</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap">
+    <div class="container">
+      <h2 class="heading" data-i18n="roadmap_title">Roadmap</h2>
+      <div class="timeline" id="roadmap-list"></div>
+    </div>
+  </section>
+
+  <!-- DEVLOG -->
+  <section id="devlog">
+    <div class="container">
+      <h2 class="heading" data-i18n="devlog_title">Devlog</h2>
+      <div class="showcase rail" tabindex="0" aria-label="Development log carousel" id="devlog-rail"></div>
+    </div>
+  </section>
+
+  <!-- PRESS -->
+  <section id="press">
+    <div class="container">
+      <h2 class="heading" data-i18n="press_title">Press</h2>
+      <div class="grid cols-3" style="gap: 20px;" id="press-cards"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container faq">
+      <h2 class="heading" data-i18n="faq_title">Frequently Asked Questions</h2>
+      <div class="grid" style="gap:14px">
+        
+        <details class="card pad">
+          <summary data-i18n="q1">Q1</summary>
+          <p class="sub" data-i18n="a1">A1</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q2">Q2</summary>
+          <p class="sub" data-i18n="a2">A2</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q3">Q3</summary>
+          <p class="sub" data-i18n="a3">A3</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q4">Q4</summary>
+          <p class="sub" data-i18n="a4">A4</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q5">Q5</summary>
+          <p class="sub" data-i18n="a5">A5</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q6">Q6</summary>
+          <p class="sub" data-i18n="a6">A6</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q7">Q7</summary>
+          <p class="sub" data-i18n="a7">A7</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q8">Q8</summary>
+          <p class="sub" data-i18n="a8">A8</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q9">Q9</summary>
+          <p class="sub" data-i18n="a9">A9</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q10">Q10</summary>
+          <p class="sub" data-i18n="a10">A10</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q11">Q11</summary>
+          <p class="sub" data-i18n="a11">A11</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q12">Q12</summary>
+          <p class="sub" data-i18n="a12">A12</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q13">Q13</summary>
+          <p class="sub" data-i18n="a13">A13</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q14">Q14</summary>
+          <p class="sub" data-i18n="a14">A14</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q15">Q15</summary>
+          <p class="sub" data-i18n="a15">A15</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q16">Q16</summary>
+          <p class="sub" data-i18n="a16">A16</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q17">Q17</summary>
+          <p class="sub" data-i18n="a17">A17</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q18">Q18</summary>
+          <p class="sub" data-i18n="a18">A18</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q19">Q19</summary>
+          <p class="sub" data-i18n="a19">A19</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q20">Q20</summary>
+          <p class="sub" data-i18n="a20">A20</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q21">Q21</summary>
+          <p class="sub" data-i18n="a21">A21</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q22">Q22</summary>
+          <p class="sub" data-i18n="a22">A22</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q23">Q23</summary>
+          <p class="sub" data-i18n="a23">A23</p>
+        </details>
+
+        <details class="card pad">
+          <summary data-i18n="q24">Q24</summary>
+          <p class="sub" data-i18n="a24">A24</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="year"></span> <span id="brandfoot">Thalors Wraths</span></div>
+      <div style="display:flex;gap:14px">
+        <a id="link_discord" href="#">Discord</a>
+        <a id="link_twitter" href="#">Twitter/X</a>
+        <a id="link_youtube" href="#">YouTube</a>
+        <a id="link_press" href="#">Press Kit</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" hidden aria-modal="true" role="dialog">
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <script type="application/ld+json" id="schema"></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
